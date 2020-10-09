@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Fremont Homes</title> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="bundles/site/l1/customStyle.css" rel="stylesheet"/>
+<!--  Chatbot integration code copied from existing working setup -->
+<link rel="stylesheet" href="css/chatbot.css">
+<script type="text/javascript" src="js/chatbot.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/index.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/tracker.js" charset="utf-8"></script>
+<style>
+	#custombanner{
+		width: auto;
+	}
+</style>
+</head>
+
+<body style="margin: 0px">
+	<noscript>Please enable javascript if your browser supports it. Otherwise please use a browser that supports javascript.</noscript>
+	<div id="container">
+	<div id="butterBarContainer"></div>
+		<picture>
+		  <source media="(max-width: 767px)" srcset="share/images/nb/ENG/vipbuyer_v17.jpg">
+		  <source media="(min-width: 768px)" srcset="share/images/nb/ENG/vipbuyer_v18.jpg">
+		  <img id="custombanner" src="share/images/nb/ENG/vipbuyer_v18.jpg"> </img>
+		</picture> 
+		<object id="mlsListings"
+			style="width:100%; height:100%" type="text/html" data="https://search.mlslistings.com/Matrix/Public/Portal.aspx?k=973826X4Z8J&p=AE-811765-986&L=1">
+		  Your browser does not support iframes.
+		</object>
+	</div>
+	  
+	<div id='lpModal' class='cmodal'> 
+		<div id='lpContent' class='cmodal-content'> 
+			<span id ='lpClose' class='close'>&times;</span> 
+		</div> 
+	</div>
+	
+	<!--new code for chatbot integration -->
+	<div id="chatContain"></div>
+<script>
+	//This is to load the header and footer menu
+	//loadHeaderAndFooterMenu('#menuTemplate', 'content', '#headerMenu', '#btm_menu');
+	// Mautic tracking
+    (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+        w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+        m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+    })(window,document,'script',mauticSrc+'/mtc.js','mt');
+	//let videoURLParams = 'rel=0&controls=1&autoplay=0&cc_load_policy=1&modestbranding=1';
+    //loadVideo(videoURLParams);
+	//window.onresize = function(){
+	//	resizeVideo('articleContent');
+	//};
+
+    setForm(assetFormName, assetFormID);
+    //controlProgressiveForm();
+    setInitialFormHeader("To get instant alerts of homes not availble online, \nComplete form below:");
+    enablePopupForm(3000, 2, 15000);
+    
+ 	// This is to load Mautic form
+	let page = 'lp';
+	loadForm("lpContent");
+	
+</script>
+</body>
+
+<!-- <script type="text/javascript" src="js/butter_bar2.js"></script>
+-->
+</html>
