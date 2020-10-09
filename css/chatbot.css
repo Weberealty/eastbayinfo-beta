@@ -1,0 +1,63 @@
+.header1 {
+    background-color: #baffc9;
+}
+
+.header2 {
+    background-color: #acde12;
+}
+
+.closed {
+    height: 50px;
+}
+
+.outerDiv {
+    height: 500px;
+}
+
+.chatFrame {
+    height: 90%;
+}
+
+@media screen and (max-height: 500px) {
+    .outerDiv {
+        height: 100%;
+    }
+    .chatFrame {
+        height: 85%;
+    }
+}
+#mlsFrame {
+    height:100%;
+    width:100%;
+    overflow:scroll;
+    position:absolute;
+}
+
+.glyphicon {
+  font-size: 1.1em;
+  float: right;
+}
+
+.glyphicon-triangle-top{
+
+}
+.glyphicon-triangle-top:after{
+  content: '\25B2';
+}
+.glyphicon-triangle-bottom:after{
+  content: '\25BC';
+}
+.glyphicon-triangle-bottom{
+
+}
+
+.chat_header{
+  background-color: #baffc9;
+  height: auto;
+  width: 350px;
+  text-align:center;
+  font-size:large;
+  font-weight:90;
+  padding-top:10px;
+  padding-bottom:10px;
+}
